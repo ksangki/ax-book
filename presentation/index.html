@@ -176,10 +176,10 @@
     .grid.grid-3, .grid.grid-4, .grid.grid-5, .grid.grid-9 { grid-template-columns: 1fr; }
   }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-          padding: 18px; display: flex; flex-direction: column; gap: 10px; min-height: 120px; }
-  .card-num { color: var(--cyan); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
-  .card-h { font-size: 14px; font-weight: 700; line-height: 1.4; color: var(--text); }
-  .card-sub { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+          padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 150px; }
+  .card-num { color: var(--cyan); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; }
+  .card-h { font-size: 17px; font-weight: 700; line-height: 1.4; color: var(--text); }
+  .card-sub { font-size: 15.5px; color: var(--muted); line-height: 1.65; }
 
   /* Agenda list */
   .agenda-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; max-width: 900px; }
@@ -194,7 +194,7 @@
   .col-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
   .col-title.cyan { color: var(--cyan); } .col-title.amber { color: var(--amber); }
   .col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-  .col li { font-size: 13.5px; line-height: 1.6; color: var(--text); padding-left: 16px; position: relative; }
+  .col li { font-size: 15px; line-height: 1.6; color: var(--text); padding-left: 16px; position: relative; }
   .col li::before { content: "·"; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
 
   /* Table */
@@ -245,6 +245,7 @@
     <span class="mono"><button class="nav-btn" onclick="goPrev()">‹</button> <span id="page-indicator">01 / 57</span> <button class="nav-btn" onclick="goNext()">›</button></span>
   </div>
   <div class="right">
+    <button class="nav-btn" id="fs-btn" onclick="toggleFS()">⛶ 전체화면</button>
     <a class="book-link" href="https://github.com/ksangki/ax-book" target="_blank">GitHub ↗</a>
     <a class="book-link" href="https://ksangki.github.io/ax-book/" target="_blank">Web Book ↗</a>
   </div>
@@ -1751,7 +1752,14 @@
   slides.forEach(s => obs.observe(s));
 
   // Keyboard navigation
+  function toggleFS(){
+    var el=document.documentElement;
+    if(!document.fullscreenElement){ (el.requestFullscreen||el.webkitRequestFullscreen||function(){}).call(el); }
+    else { (document.exitFullscreen||document.webkitExitFullscreen||function(){}).call(document); }
+  }
+  document.addEventListener('fullscreenchange',function(){var b=document.getElementById('fs-btn'); if(b) b.textContent=document.fullscreenElement?'⛶ 나가기':'⛶ 전체화면';});
   document.addEventListener('keydown', (e) => {
+    if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFS(); return; }
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
       e.preventDefault(); goNext();
     }
