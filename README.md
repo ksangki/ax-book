@@ -11,6 +11,9 @@ AX(AI Transformation)를 슬라이드가 아니라 실제로 돌아가는 시스
 ## 📖 온라인으로 읽기
 **https://ksangki.github.io/ax-book/**
 
+## 🖥️ 발표 자료
+**https://ksangki.github.io/ax-book/presentation/** (키보드 ←→ · Space로 넘김)
+
 ## 📥 다운로드
 - [PDF](AX를-만들다-v1.2.0.pdf)
 
