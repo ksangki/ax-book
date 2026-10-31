@@ -16,7 +16,8 @@ AX(AI Transformation)를 슬라이드가 아니라 실제로 돌아가는 시스
 **https://ksangki.github.io/ax-book/presentation/** (키보드 ←→ · Space로 넘김)
 
 ## 📥 다운로드
-- [PDF](AX를-만들다-v1.2.0.pdf)
+- [PDF](AX를-만들다-v1.2.1.pdf) · [EPUB](epub/AX를-만들다-v1.2.1.epub)
+- 판 이력 v1.2.1 (2026-11-01): 문체 점검 — AI 문체 패턴 260곳 정리, 내용·수치 변경 없음
 
 ## 목차
 프롤로그 · PART 1 AX란 무엇인가 · PART 2 일의 재정의 · PART 3 사람을 다시 설계하다 · PART 4 레일과 신뢰 · 에필로그
