@@ -10,6 +10,7 @@ AX(AI Transformation)를 슬라이드가 아니라 실제로 돌아가는 시스
 
 ## 📖 온라인으로 읽기
 **https://ksangki.github.io/ax-book/**
+- **오프닝 영상**: [60초 모션그래픽](https://ksangki.github.io/ax-book/media/opening.mp4) · 웹 버전 첫 화면에도 실려 있다
 
 ## 🖥️ 발표 자료
 **https://ksangki.github.io/ax-book/presentation/** (키보드 ←→ · Space로 넘김)
